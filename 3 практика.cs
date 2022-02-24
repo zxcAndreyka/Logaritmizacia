@@ -11,71 +11,86 @@ namespace _1
         static void Main(string[] args)
         {
             // 1 задание 
-            /*Console.WriteLine("Напишите поочередно координаты коня.Сначала координаты по Х, потом по У");
-            int X1 = Convert.ToInt32(Console.ReadLine());
-            int Y1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Напишите поочередно координаты пешки.Сначала координаты по Х, потом по У");
-            int X2 = Convert.ToInt32(Console.ReadLine());
-            int Y2 = Convert.ToInt32(Console.ReadLine());
-            int q = X1 + 2;
-            int w = Y1 + 1;
-            if (((q == X2) & (w == Y2)) | ((q == X2) & (Y1 - 1 == Y2)) | ((X1 + 1 == X2) & (Y1 + 2 == Y2)) | ((X1 + 1 == X2) & (Y1 - 2 == Y2))
-            | ((X1 - 2 == X2) & (Y1 - 1 == Y2)) | ((X1 - 2 == X2) & (Y1 + 1 == Y2)) | ((X1 - 1 == X2) & (Y1 - 2 == Y2)) | ((X1 - 1 == X2) & (Y1 + 2 == Y2)))
+           /* double y;
+            Console.WriteLine("введите число Х");
+            double x = Convert.ToDouble(Console.ReadLine());
+            if (x < 3.5)
             {
-                Console.WriteLine("Конь может съесть пешку");
+                y = -(2 * x) / (-4 * x - 1);
             }
-            else if (X1 > 8 | Y1 > 8 | X2 > 8 | Y2 > 8)
-                Console.WriteLine("Вы написали координаты за границей шахматной доски");
             else
-                Console.WriteLine("конь не может съесть пешку");*/
+            {
+                y = 4 * x * x + 2 * x - 19;
+            }
+            Console.WriteLine("y=" + y);*/
 
             // 2 задание
-            /*Console.WriteLine("Введите возраст ");
-              int V = Convert.ToInt32(Console.ReadLine());
-              Console.WriteLine("Введите пол (мужской/женский)");
-              string P = Console.ReadLine();
-              int K;
-              if(P == "женский")
-              {
-              K = 2 * V - 14;
-              }
-              else
-              {
-              K = V / 2 + 7;
-              }
-              Console.WriteLine("Лучший возраст вашего партнёра ="+ K);*/
+            /*Console.WriteLine("Введите потраченые минуты");
+            double x = Convert.ToDouble(Console.ReadLine());//Потраченые минуты
+            Console.WriteLine("Введите минуты по тарифу");
+            double a = Convert.ToDouble(Console.ReadLine());//Лимит минут
+            Console.WriteLine("Введите цену тарифа");
+            double b = Convert.ToDouble(Console.ReadLine());//цена тарифа
+            Console.WriteLine("Введите цену р/мин за превышение тарифа");
+            double c = Convert.ToDouble(Console.ReadLine());//цена р/мин за превышение тарифа
+            double d;
+            if(x<=a)
+            {
+                d = b;
+            }
+            else
+            {
+                d = b + c * (x - a);
+            }
+            Console.WriteLine("оплата за месяц="+d);*/
 
-            // 3 задание
-            /* Console.WriteLine("Введите натуральное число ");
+            //3 задание
+            /* Console.WriteLine("Введите длину отверстия ");
+             double A = Convert.ToDouble(Console.ReadLine());
+             Console.WriteLine("Введите ширину отверстия");
+             double B = Convert.ToDouble(Console.ReadLine());
+             Console.WriteLine("Введите длину кирпича ");
+             double x = Convert.ToDouble(Console.ReadLine());
+             Console.WriteLine("Введите ширину кирпича ");
+             double y = Convert.ToDouble(Console.ReadLine());
+             Console.WriteLine("Введите высоту кирпича ");
+             double z = Convert.ToDouble(Console.ReadLine());
+             if ((y < B) || (z < B) && (x < A))
+             {
+                 Console.WriteLine("пройдет");
+             }
+             else 
+             {
+                 if ((y < A) && (z < B))
+                 {
+                     Console.WriteLine("пройдет");
+                 }
+                 else
+                 {
+                     Console.WriteLine("не пройдет");
+                 }
+             }*/
+
+            //4 задание
+           /* double y = 0;
+            Console.WriteLine("введите значение X ");
             double x = Convert.ToDouble(Console.ReadLine());
-            if(x%2==0)
+            if ((-9 <= x) && (x< -6))
+                {
+                Console.WriteLine("введите значение R");
+                double R = Convert.ToDouble(Console.ReadLine());
+                y = Math.Sqrt(Math.Pow(R,2) - Math.Pow((x + 6), 2));
+            }
+            else if ((0 <= x) && (x <= 3))
             {
-            Console.WriteLine("число чётное");
+                y = -x + 3;
             }
             else
             {
-            Console.WriteLine("число нечётное");
-            }*/
-
-            // 4 задание
-            /*Console.WriteLine("Введите натуральное число ");
-            int F = Convert.ToInt32(Console.ReadLine());
-            int g = F / 2;
-            double n = Convert.ToDouble(F);
-            double l = n / 2;
-            if (g < l)
-            {
-                Console.WriteLine(" число не четное ");
+                y = 0.5 * x - 1.5;
             }
-            else
-            {
-                Console.WriteLine(" число четное ");
-            }
+            Console.WriteLine("Значение ординаты= {0}", +y);
             Console.ReadKey();*/
-
-
-
-
         }
 
     }
