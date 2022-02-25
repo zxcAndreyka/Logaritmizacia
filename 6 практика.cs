@@ -39,24 +39,31 @@ namespace _1
 
             // 2
 
-            /*double count = 0;
-            double i = 3;
- 
-                do
-                {
-                    i -= 2;
-                    count++;
-                } while (count <= 9);
-                Console.WriteLine(i);
-            double a = double.Parse(Console.ReadLine());
-            double count1 = 3;
-            for(int j =0; j < 9; j++)
+            /*Console.Write("Введите значение ");
+            double a = Convert.ToDouble(Console.ReadLine());
+            double S = 0;
+            switch (a)
             {
-                count1 = (Math.Pow(count1, 2) - a) * count1;
+                case < 0:
+                    S = 0;
+                    int i = 3;
+                    while (i <= 9)
+                    {
+                        S += i - 2;
+                        i += 2;
+                    }
+                    break;
+                case >= 0:
+                    S = 1;
+                    int j = 2;
+                    while (j <= 8)
+                    {
+                        S *= j * j - a;
+                        j += 2;
+                    }
+                    break;
             }
-                Console.WriteLine(count1);
-            
-            Console.ReadKey();*/
+            Console.WriteLine(S);*/
 
             // 3
             /*int n = 100;
