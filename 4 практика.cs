@@ -108,11 +108,9 @@ namespace _1
                     Console.WriteLine(c);
                     break;
                 case (< 0):
-                    c = y - b * b + Math.Tan(y);
-                    Console.WriteLine(c);
+                    c = y - b * b + Math.Tan(y);                    
                     break;
-                default:
-                    break;*/
+                    Console.WriteLine(c);*/
 
             // 4 задание 
             /*Console.WriteLine("напишите число ");
