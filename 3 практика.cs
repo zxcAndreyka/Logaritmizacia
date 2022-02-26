@@ -75,21 +75,28 @@ namespace _1
            /* double y = 0;
             Console.WriteLine("введите значение X ");
             double x = Convert.ToDouble(Console.ReadLine());
-            if ((-9 <= x) && (x< -6))
-                {
-                Console.WriteLine("введите значение R");
-                double R = Convert.ToDouble(Console.ReadLine());
-                y = Math.Sqrt(Math.Pow(R,2) - Math.Pow((x + 6), 2));
-            }
-            else if ((0 <= x) && (x <= 3))
+            if (-9 <= x && x <= 9)
             {
-                y = -x + 3;
+                if ((-9 <= x) && (x < -6))
+                {
+                    Console.WriteLine("введите значение R");
+                    double R = Convert.ToDouble(Console.ReadLine());
+                    y = Math.Sqrt(Math.Pow(R, 2) - Math.Pow((x + 6), 2));
+                }
+                else if ((0 <= x) && (x <= 3))
+                {
+                    y = -x + 3;
+                }
+                else
+                {
+                    y = 0.5 * x - 1.5;
+                }
+                Console.WriteLine("Значение ординаты= {0}", +y);
             }
             else
             {
-                y = 0.5 * x - 1.5;
+                Console.WriteLine("Не определено");
             }
-            Console.WriteLine("Значение ординаты= {0}", +y);
             Console.ReadKey();*/
         }
 
