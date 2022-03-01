@@ -22,15 +22,8 @@ namespace _1
               g = g + h;
             }
             Console.WriteLine(g);
-
-
-        }
-    }
-}
-class Program
-    {
-        static void Main(string[] args)
-        {
+            
+            // 3 задание
             Random x = new Random();
             int n = x.Next(1,11);
             Console.WriteLine(n);
@@ -52,6 +45,10 @@ class Program
                 }
             }
             Console.ReadKey();
+
         }
     }
 }
+
+            
+        
