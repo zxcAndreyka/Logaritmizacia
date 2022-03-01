@@ -46,14 +46,14 @@ namespace _1
             }*/
 
             int n = Convert.ToInt32(Console.ReadLine());
-            int n = 2 * n + 1;
-            int y = ;
-            double p = ;
-            for( int count = 1 ; count >=3 n ; count += 2 )
+            n = 2 * n + 1;
+            double y = 0;
+            y = Math.Sqrt(n); 
+            for (int count = n - 2; count >= 1; count -= 2)
             {
-                Concole.WriteLine(count);
+                y = Math.Sqrt(count + y);
             }
-
+            Console.WriteLine(y);   
 
             Console.ReadKey();
 
