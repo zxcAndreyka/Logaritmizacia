@@ -27,3 +27,31 @@ namespace _1
         }
     }
 }
+class Program
+    {
+        static void Main(string[] args)
+        {
+            Random x = new Random();
+            int n = x.Next(1,11);
+            Console.WriteLine(n);
+            Console.WriteLine("Попробуйте угадать число от 1-10, у вас есть 5 попыток");
+            {
+                for(int t = 0; t < 5; t++)
+                {
+                    int r=Convert.ToInt32(Console.ReadLine());
+                    if (n == r)
+                    {
+                        Console.WriteLine("Поздравляю, вы угадали, загаданным числом было "+ n);
+                    }
+                    else if(r>10)
+                    {
+                        Console.WriteLine("Число должно быть от 1 до 10");
+                    }
+                    else
+                        Console.WriteLine("Попробуйте снова");
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
