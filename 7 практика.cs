@@ -12,19 +12,19 @@ namespace _1
         {
 
             // 1 задание 
-            Console.WriteLine("введите n");
+            /*Console.WriteLine("введите n");
             Double n = Convert.ToDouble(Console.ReadLine());
             int g = 0;
             int h = 1;
-            for (int count = 1; n >= count; count ++)
+            for (int count = 1; n >= count; count++)
             {
                 h += 2;
-              g = g + h;
+                g = g + h;
             }
-            Console.WriteLine(g);
-            
+            Console.WriteLine(g);*/
+
             // 3 задание
-            Random x = new Random();
+            /*Random x = new Random();
             int n = x.Next(1,11);
             Console.WriteLine(n);
             Console.WriteLine("Попробуйте угадать число от 1-10, у вас есть 5 попыток");
@@ -43,7 +43,18 @@ namespace _1
                     else
                         Console.WriteLine("Попробуйте снова");
                 }
+            }*/
+
+            int n = Convert.ToInt32(Console.ReadLine());
+            int n = 2 * n + 1;
+            int y = ;
+            double p = ;
+            for( int count = 1 ; count >=3 n ; count += 2 )
+            {
+                Concole.WriteLine(count);
             }
+
+
             Console.ReadKey();
 
         }
