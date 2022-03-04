@@ -1,0 +1,25 @@
+Console.WriteLine("Введите координаты ферзя по Х от 1 до 8");
+            int F1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите координаты ферзя по У от 1 до 8");
+            int F2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите координаты пешки по Х от 1 до 8");
+            int P1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите координаты пешки по У от 1 до 8");
+            int P2 = Convert.ToInt32(Console.ReadLine());
+            if ((8 < F1 || F1 < 1) || (8 < F2 || F2 < 1) || (8 < P1 || P1 < 1) || (8 < P2 || P2 < 1))
+            {
+                Console.WriteLine("Ошибка: введено не правильное число больше 8 или меньше одного");
+
+            }
+            else if (F1 == P1 || F2 == P2 )
+            {
+                Console.WriteLine("Ферзь может сьесть пешку");
+            }
+            else
+            {
+                for (int g = F1;   g > 1;  g--)
+                {
+                    if
+                }
+            }
+            Console.ReadKey();
