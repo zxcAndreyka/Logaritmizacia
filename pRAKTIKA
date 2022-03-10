@@ -1,0 +1,83 @@
+            Random x = new Random();
+            int n = x.Next(1, 100);
+            Console.WriteLine("выберите будет ли кол-во попыток ограниченное или нет, где 0-нет, 1-да");
+            int c = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(n);
+            if (c == 1)
+            {
+                Console.WriteLine("Выберите кол-во попыток");
+                int t = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Попробуйте угадать число от 1-99, у вас есть " + t + " попыток");
+                {
+                    for (int i = 0; i < t; i++)
+                    {
+                        int r = Convert.ToInt32(Console.ReadLine());
+                        if (n == r)
+                        {
+                            Console.WriteLine("Поздравляю, вы угадали, загаданным числом было " + n);
+                        }
+                        else if (r > n)
+                        {
+                            Console.WriteLine("Число меньше " + r);
+                        }
+                        else if (r < n)
+                        {
+                            Console.WriteLine("Число больше " + r);
+                        }
+                        else
+                            Console.WriteLine("Попробуйте снова ");
+                    }
+                }
+            }
+            else
+            {
+                
+                Console.WriteLine("Попробуйте угадать число от 1-99");
+                int r = Convert.ToInt32(Console.ReadLine());
+                while (n != r)
+                {
+                    if (r > n)
+                    {
+                        Console.WriteLine("Число меньше " + r);
+                    }
+                    else if (r < n)
+                    {
+                        Console.WriteLine("Число больше " + r);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Попробуйте снова ");
+                    }
+                    r = Convert.ToInt32(Console.ReadLine());
+                }
+                if (n == r)
+                {
+                    Console.WriteLine("Поздравляю, вы угадали, загаданным числом было " + n);
+                }
+ 
+            }
+            Console.ReadKey();*/
+ 
+ 
+            int a = Convert.ToInt32(Console.ReadLine());
+            int l = 1;
+            int r = 100;
+            Random x = new Random();
+            int n = x.Next(l, r);
+            while (a != n)
+            {
+                Console.WriteLine(n);
+                if (n < a)
+                {
+                    Console.WriteLine("Загаданное число больше");
+                    l = n;
+                }
+                else if (n > a)
+                {
+                    Console.WriteLine("Загаданное число меньше");
+                    r = n;
+                }
+                else
+                {
+                    Console.WriteLine("Поздравляю, вы угадали, загаданным числом было " + a);
+                }
