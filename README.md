@@ -1,2 +1,0 @@
-# Logaritmizacia
-practices
