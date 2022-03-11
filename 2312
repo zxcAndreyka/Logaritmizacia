@@ -1,0 +1,38 @@
+/*Console.WriteLine("Введите вещественное число Х");
+            double X = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите целое число n которое больше 0");
+            int n = Convert.ToInt32(Console.ReadLine());
+            double count=0;
+            n *= 2;
+            if (n <= 0)
+            {
+                Console.WriteLine("Введите число больше 0. Вы ввели число меньше нуля ");
+            }
+            else
+            {
+                
+
+                for ( int g= 1 ;g < n ;g += 2)
+                {
+                    int F;
+                    for ( F = 0; F < g; F++)
+                    {
+                        F *= F;
+                    }
+                    count += Math.Pow(-1, g) * Math.Pow(X, g) / F;
+                }
+                   
+            }
+            Console.WriteLine(count);*/
+
+
+            double sum=0;
+            int A = Convert.ToInt32(Console.ReadLine());
+            int K = Convert.ToInt32(Console.ReadLine());
+            while (sum < A)
+            {
+                K = K + 1;
+                sum = sum - (1 / K);
+            }
+            Console.WriteLine(K + sum);
+            Console.ReadKey();
