@@ -1,0 +1,72 @@
+int str = 4, stolb = 5;
+            int[,] massiv = new int[str, stolb];
+            Random rnd = new Random();
+
+            // Задаем случайную матрицу и выводим на экран
+            for (int i = 0; i < str; ++i)
+            {
+                for (int j = 0; j < stolb; ++j)
+                {
+                    massiv[i, j] = rnd.Next(0, 6);
+                    Console.Write(" \t" + massiv[i, j]);
+                }
+                Console.WriteLine();
+            }
+            int nulel = 0;
+            int nulstr = 0;
+            int number = 0;
+            int numbermax = 0;
+            int numbermaxcol = 0;
+            int numbercol = 0;
+            int numbermaxcol4 = 0;
+            for (int i = 0; i < str; ++i)
+            {
+                for (int j = 0; j < stolb; ++j)
+                {
+                    if (massiv[i, j] == 0)
+                    {
+                        nulel += 1;
+                    }
+                    else
+                    {
+                        number = massiv[i, j];
+                        if (number > numbermax)
+                        {
+                            numbermax = number;
+                        }
+                        if (number == 5 )
+                        {
+                            ++numbermaxcol;
+                        }
+                        if (number == 4)
+                        {
+                            ++numbermaxcol4;
+                        }
+
+                    }
+                }
+               
+                Console.WriteLine("Строка {0} содержит {1} нулевых элементов", (i + 1), nulel);
+                if (nulel == 0)
+                {
+                    nulstr += 1;
+                }
+                else
+                {
+                    nulel = 0;
+                }
+
+            }
+            if (numbermaxcol > 1)
+            {
+                Console.WriteLine("Максимальное число " + numbermax + ", его количество в матрице " + numbermaxcol);
+            }
+            else
+            {
+                Console.WriteLine("Максимальное число 4 , его количество в матрице " + numbermaxcol4);
+            }
+            
+            Console.WriteLine("Количество строк без элемента 0 " + nulstr);
+
+
+            Console.ReadKey();
