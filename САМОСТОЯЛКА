@@ -1,17 +1,74 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-
-
-Console.WriteLine("Введите размер вашего массива");
-int x = Convert.ToInt32(Console.ReadLine());
-int y = Convert.ToInt32(Console.ReadLine());
-int[,] massiv = new int[x,y];
-int numb = 10;
-for (int i = 0; i < x; ++i)
+namespace _1
 {
-    for (int j = 0; j < y; ++j, numb+=2)
+    internal class Program
     {
-            massiv[i, j] = numb; 
-        Console.Write(" \t" + massiv[i, j]);
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Напишите номер задачи.Например: 1");
+            int name = Convert.ToInt32(Console.ReadLine());
+            switch (name)
+            {
+                case 1:
+
+                    Random rnd = new Random();
+                    int[] mass = new int[1001];
+                    int col = 0;
+                    for (int i = 0; i < mass.Length; i++)
+                    {
+                        mass[i] = rnd.Next(0, 10);
+                        if (mass[i] == 5)
+                        {
+                            ++col;
+                            if (i / 10 == 0)
+                            {
+                                Console.Write("|00" + i);
+                            }
+                            else if (i / 100 == 0)
+                            {
+                                Console.Write("|0" + i);
+                            }
+                            else
+                            {
+                                Console.Write("|" + i);
+                            }
+                            if (col % 11 == 0)
+                            {
+                                Console.WriteLine();
+                            }
+                        }
+
+                    }   
+                    Console.WriteLine();
+                    Console.Write("количество цифр 5 : " + col + "");
+
+                    Console.ReadKey();
+                break;
+                case 2:
+                    Console.WriteLine("Введите размер вашего массива");
+                    int x = Convert.ToInt32(Console.ReadLine());
+                    int y = Convert.ToInt32(Console.ReadLine());
+                    int[,] massiv = new int[x,y];
+                    int numb = 10;
+                    for (int i = 0; i < x; ++i)
+                    {
+                        for (int j = 0; j < y; ++j, numb+=2)
+                        {
+                                massiv[i, j] = numb; 
+                            Console.Write(" \t" + massiv[i, j]);
+                        }
+                        Console.WriteLine();
+                    }
+                break;
+            }    
+        }
     }
-    Console.WriteLine();
 }
+
+
+
