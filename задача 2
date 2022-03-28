@@ -1,0 +1,16 @@
+
+Console.WriteLine("Введите размер вашего массива");
+int x = Convert.ToInt32(Console.ReadLine());
+int y = Convert.ToInt32(Console.ReadLine());
+int[,] massiv = new int[x,y];
+int numb = 10;
+for (int i = 0; i < x; ++i)
+{
+    for (int j = 0; j < y; ++j, numb+=2)
+    {
+            massiv[i, j] = numb; 
+        Console.Write(" \t" + massiv[i, j]);
+    }
+    Console.WriteLine();
+}
+
