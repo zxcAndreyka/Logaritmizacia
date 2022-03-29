@@ -35,3 +35,7 @@ Console.WriteLine("Введите номер задания");
 
                     Console.ReadKey();
                     break;
+                    case 2 :
+
+
+                    break;
