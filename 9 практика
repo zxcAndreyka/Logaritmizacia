@@ -16,12 +16,7 @@ Console.WriteLine("Введите номер задания");
                             if (mass2[j] == mass[i])
                             {
                                 g++;
-
                             }
-
-
-
-
                         }
                     }
                     if (g == mass.Length)
@@ -32,7 +27,6 @@ Console.WriteLine("Введите номер задания");
                     {
                         Console.WriteLine("это не шестнадцатиричное число");
                     }
-
                     Console.ReadKey();
                     break;
                     case 2 :
