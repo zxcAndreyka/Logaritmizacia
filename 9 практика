@@ -36,17 +36,17 @@ Console.WriteLine("Введите номер задания");
                     Console.ReadKey();
                     break;
                     case 2 :
- string str;
-            int wordcol = 0;
-            Console.WriteLine("Введите строку");
-            str = Console.ReadLine();
-            string[] strmas = str.Split(' ');
-            for (int i=0;i<strmas.Length;i++)
-            {
-                wordcol = i;
-                Console.WriteLine(strmas[i]);
-            }
-            Console.WriteLine("Количество слов "+ (wordcol+1));
-            Console.ReadKey();
+                        string str;
+                        int wordcol = 0;
+                        Console.WriteLine("Введите строку");
+                        str = Console.ReadLine();
+                        string[] strmas = str.Split(' ');
+                        for (int i=0;i<strmas.Length;i++)
+                        {
+                            wordcol = i;
+                            Console.WriteLine(strmas[i]);
+                        }
+                        Console.WriteLine("Количество слов "+ (wordcol+1));
+                        Console.ReadKey();
 
                     break;
