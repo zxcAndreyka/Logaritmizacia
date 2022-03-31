@@ -55,5 +55,22 @@ Console.WriteLine("Введите номер задания");
                     Console.WriteLine(number);
                     
                     break;
-                    
+                    case2:
+                    Console.WriteLine("Введите кол-во учеников");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите Фамилии и инициалы ученика, без пробелов ");
+            string[] surname = new string[x];
+            int repsur = 0;
+            for (int i = 0; i < x; i++)
+            {
+                surname[i] = Console.ReadLine();
+
             }
+            Console.WriteLine("Список учеников");
+            for (int i = 0; i < x; i++)
+            {
+                Console.WriteLine(surname[i]+ repsur);
+
+            }
+            }
+            
