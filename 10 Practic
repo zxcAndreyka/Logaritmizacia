@@ -72,5 +72,19 @@ Console.WriteLine("Введите номер задания");
                 Console.WriteLine(surname[i]+ repsur);
 
             }
+            case3:
+             Console.WriteLine("Введите число в двоичной системе, только 0 и 1");
+            string number =Console.ReadLine();
+            char[] mass = number.ToCharArray();
+            for(int i = 0; i < mass.Length; i++)
+            {
+                if ((mass[i]!='0'&& mass[i] != '1'))
+                {
+                    Console.WriteLine("Число введено в некоректной форме. Введите число в двоичной системе, только 0 и 1");
+                    number = Console.ReadLine();
+                    mass = number.ToCharArray();
+                }
+            }
+            Console.WriteLine(number);
             }
             
