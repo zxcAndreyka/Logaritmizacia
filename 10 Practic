@@ -1,0 +1,59 @@
+Console.WriteLine("Введите номер задания");
+            int egor = Convert.ToInt32(Console.ReadLine());
+            switch (egor)
+            {
+                case 1:
+                    Console.WriteLine("Напишите числа в римской системе.С большой буквы,в формате: СI");
+                    string rim = Console.ReadLine();
+                    int number = 0;
+                    int count = 0;
+                    int r = 0;
+                    char[] mass = rim.ToCharArray(); 
+                    for (int i = 0 ;i < mass.Length ;i++)
+                    {
+                        count = r;
+                        if (mass[i] == 'I')
+                        {
+                            r = 1;
+                            number += 1;
+                        }
+                        else if (mass[i] == 'V')
+                        {
+                            r = 5;
+                            number += 5;
+                        }
+                        else if (mass[i] == 'X')
+                        {
+                            r = 10;
+                            number += 10;
+                        }
+                        else if (mass[i] == 'L')
+                        {
+                            r = 50;
+                            number += 50;
+                        }
+                        else if (mass[i] == 'C')
+                        {
+                            r = 100;
+                            number += 100;
+                        }
+                        else if (mass[i] == 'D')
+                        {
+                            r = 500;
+                            number += 500;
+                        }
+                        else if (mass[i] == 'M')
+                        {
+                            r = 1000;
+                            number += 1000;
+                        }
+                        if(count < r)
+                        {
+                            number -= count*2;
+                        }
+                    }
+                    Console.WriteLine(number);
+                    
+                    break;
+                    
+            }
