@@ -74,18 +74,28 @@ Console.WriteLine("Введите номер задания");
             }
             case3:
              Console.WriteLine("Введите число в двоичной системе, только 0 и 1");
-            string number =Console.ReadLine();
+            string number = Console.ReadLine();
             char[] mass = number.ToCharArray();
-            for(int i = 0; i < mass.Length; i++)
+            int deg = 0;
+            int ch = 0;
+            for (int i = 0; i < mass.Length; i++)
             {
-                if ((mass[i]!='0'&& mass[i] != '1'))
+                if ((mass[i] != '0' && mass[i] != '1'))
                 {
                     Console.WriteLine("Число введено в некоректной форме. Введите число в двоичной системе, только 0 и 1");
                     number = Console.ReadLine();
                     mass = number.ToCharArray();
                 }
             }
-            Console.WriteLine(number);
+            for (int i = number.Length - 1; i>= 0;i--)
+            {
+                if (mass[i] == '1')
+                {
+                    ch += Convert.ToInt32(Math.Pow(2, deg));
+                }
+                ++deg;
+            }
+            Console.WriteLine(ch);
             }
              Console.WriteLine("Введите Фамилии и инициалы ученика, через пробел(Фамилия должна стоять в начале)");
                      string x = Console.ReadLine();
