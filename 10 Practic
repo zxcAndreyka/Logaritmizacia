@@ -56,23 +56,24 @@ Console.WriteLine("Введите номер задания");
                     
                     break;
                     case2:
-                    Console.WriteLine("Введите кол-во учеников");
-            int x = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите Фамилии и инициалы ученика, без пробелов ");
-            string[] surname = new string[x];
-            int repsur = 0;
-            for (int i = 0; i < x; i++)
+                     Console.WriteLine("Введите Фамилии и инициалы ученика, через пробел(Фамилия должна стоять в начале)");
+            int n = int.Parse(Console.ReadLine());
+            string[] a = new string[n];
+            for (int i = 0; i < n; i++)
             {
-                surname[i] = Console.ReadLine();
-
+                a[i] = Console.ReadLine();
             }
-            Console.WriteLine("Список учеников");
-            for (int i = 0; i < x; i++)
+            for (int i = 0; i < n; i++)
             {
-                Console.WriteLine(surname[i]+ repsur);
-
+                int listFam = (from p in a
+                              where p.Split(' ','.')[0] == a[i].Split(' ', '.')[0]
+                              select p).Count();
+                Console.WriteLine(a[i].Split(' ', '.')[0] + " повторяется " + listFam + " раз") ;
             }
-            case3:
+            Console.ReadKey();
+            }
+            
+            case 3:
              Console.WriteLine("Введите число в двоичной системе, только 0 и 1");
             string number =Console.ReadLine();
             char[] mass = number.ToCharArray();
@@ -87,14 +88,5 @@ Console.WriteLine("Введите номер задания");
             }
             Console.WriteLine(number);
             }
-             Console.WriteLine("Введите Фамилии и инициалы ученика, через пробел(Фамилия должна стоять в начале)");
-                     string x = Console.ReadLine();
-                    Console.WriteLine("");
-                    string[] surname = x.Split('.',' ');
-                    int repsur = 0;
-                    for (int i = 0; i < surname.Length; i +=3)
-                    {
-                        Console.WriteLine(surname[i]);
-
-                    }
-                    Console.WriteLine("Список учеников");
+            break;
+             
