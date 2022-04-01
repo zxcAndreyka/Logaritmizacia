@@ -89,4 +89,39 @@ Console.WriteLine("Введите номер задания");
             Console.WriteLine(number);
             }
             break;
-             
+             string Viddle = Console.ReadLine();
+                    int Count = 0;
+                    int Gok = 0;
+                    char massive;
+                    char list; 
+                    List<char> alphabet = new List<char>();
+                    for (int i = 1040; i < 1104; i++)
+                    {
+                        alphabet.Add((char)i);
+                    }
+                    char[] MASS = Viddle.ToCharArray();
+                    for (int i = 0; i < MASS.Length; i++)
+                    {
+                        for (int j = 0; j < alphabet.Count; j++)
+                        {
+                            MASS[i] = massive;
+                            if (MASS[i] != alphabet[j])
+                            {
+                                Count += 1;
+                                Console.WriteLine(Count);
+                            }
+                            else if (MASS[i] == alphabet[j])
+                            {
+                                if (Count >= Gok)
+                                {
+                                    Gok = Count;
+                                }
+                                else
+                                {
+                                }
+                                Count = 0;
+                            }
+                        }
+                    }
+                    Console.WriteLine(Gok);  
+                    
