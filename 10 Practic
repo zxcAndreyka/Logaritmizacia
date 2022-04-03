@@ -89,39 +89,46 @@ Console.WriteLine("Введите номер задания");
             Console.WriteLine(number);
             }
             break;
-             string Viddle = Console.ReadLine();
-                    int Count = 0;
-                    int Gok = 0;
-                    char massive;
-                    char list; 
-                    List<char> alphabet = new List<char>();
-                    for (int i = 1040; i < 1104; i++)
+            case 4:
+             Console.WriteLine("Введите текст на русской раскладке");
+            string Viddle = Console.ReadLine();
+            int Count = 0;
+            int Gok = 0;
+            int numSimvol = 0;
+            int maxnumSimvol = 0;
+            List<char> alphabet = new List<char>();
+            for (int i = 1040; i < 1104; i++)
+            {
+                alphabet.Add((char)i);
+            }
+            char[] MASS = Viddle.ToCharArray();
+            for (int i = 0; i < MASS.Length; i++)
+            {
+                Gok = 0;
+                for (int j = 0; j < alphabet.Count; j++)
+                { 
+                    if (MASS[i] == alphabet[j])
                     {
-                        alphabet.Add((char)i);
+                        Count += 1;
+                        numSimvol = 0;
                     }
-                    char[] MASS = Viddle.ToCharArray();
-                    for (int i = 0; i < MASS.Length; i++)
+                    else if(MASS[i] != alphabet[j])
                     {
-                        for (int j = 0; j < alphabet.Count; j++)
+                        Gok++;
+                        if (Gok == 64)
                         {
-                            MASS[i] = massive;
-                            if (MASS[i] != alphabet[j])
+                            numSimvol++;
+                            if (maxnumSimvol <= numSimvol)
                             {
-                                Count += 1;
-                                Console.WriteLine(Count);
-                            }
-                            else if (MASS[i] == alphabet[j])
-                            {
-                                if (Count >= Gok)
-                                {
-                                    Gok = Count;
-                                }
-                                else
-                                {
-                                }
-                                Count = 0;
+                                maxnumSimvol = numSimvol;
                             }
                         }
                     }
-                    Console.WriteLine(Gok);  
+                }
+            }
+            Console.WriteLine("Количество букв: "+Count);
+            Console.Write("Количество элементов, отличных от букв: " );
+            Console.WriteLine(MASS.Length - Count);
+            Console.WriteLine("Количество максимальных элементов, в интервале между буквами: "+maxnumSimvol);
+            break;
                     
