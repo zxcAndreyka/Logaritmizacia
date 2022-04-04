@@ -68,5 +68,43 @@ int str = 4, stolb = 5;
             
             Console.WriteLine("Количество строк без элемента 0 " + nulstr);
 
+            
+             case 4:
+                    Console.WriteLine("Задайте условия матрицы, их столбцы и строки, для первой матрицы. Они должны подходить под условие умножения матрицы");
 
-            Console.ReadKey();
+                    int stroki = Convert.ToInt32(Console.ReadLine());
+                    int stolbiki = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine("Задайте условия матрицы, их столбцы и строки, для второй матрицы. Они должны подходить под условие умножения матрицы");
+
+                    int stroki2 = Convert.ToInt32(Console.ReadLine());
+                    int stolbiki2 = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine("                   Матрица 1");
+                    int[,] mass = new int[stroki, stolbiki];
+                    Random rndm = new Random();
+
+                    // Задаем случайную матрицу и выводим на экран
+                    for (int i = 0; i < stroki; ++i)
+                    {
+                        for (int j = 0; j < stolbiki; ++j)
+                        {
+                            mass[i, j] = rndm.Next(0, 10);
+                            Console.Write(" \t" + mass[i, j]);
+                        }
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine("");
+                    Console.WriteLine("                   Матрица 2");
+                    int[,] mass2 = new int[stroki2, stolbiki2];
+                    Random rndm2 = new Random();
+                    for (int i = 0; i < stroki; ++i)
+                    {
+                        for (int j = 0; j < stolbiki; ++j)
+                        {
+                            mass[i, j] = rndm.Next(0, 10);
+                            Console.Write(" \t" + mass[i, j]);
+                        }
+                        Console.WriteLine();
+                    }
+
+                    break;
+            }
