@@ -51,6 +51,10 @@ Console.WriteLine("Введите номер задания");
                         {
                             number -= count*2;
                         }
+                        else
+                        {
+                             Console.WriteLine("Вы ввели числа не входящие в римскую систему счисления, попробуйте заново ");
+                        }
                     }
                     Console.WriteLine(number);
                     
