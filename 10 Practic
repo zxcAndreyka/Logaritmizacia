@@ -60,79 +60,86 @@ Console.WriteLine("Введите номер задания");
                     
                     break;
                     case2:
-                     Console.WriteLine("Введите Фамилии и инициалы ученика, через пробел(Фамилия должна стоять в начале)");
-            int n = int.Parse(Console.ReadLine());
-            string[] a = new string[n];
-            for (int i = 0; i < n; i++)
-            {
-                a[i] = Console.ReadLine();
-            }
-            for (int i = 0; i < n; i++)
-            {
-                int listFam = (from p in a
-                              where p.Split(' ','.')[0] == a[i].Split(' ', '.')[0]
-                              select p).Count();
-                Console.WriteLine(a[i].Split(' ', '.')[0] + " повторяется " + listFam + " раз") ;
-            }
-            Console.ReadKey();
-            }
-            
-            case 3:
-             Console.WriteLine("Введите число в двоичной системе, только 0 и 1");
-            string number =Console.ReadLine();
-            char[] mass = number.ToCharArray();
-            for(int i = 0; i < mass.Length; i++)
-            {
-                if ((mass[i]!='0'&& mass[i] != '1'))
-                {
-                    Console.WriteLine("Число введено в некоректной форме. Введите число в двоичной системе, только 0 и 1");
-                    number = Console.ReadLine();
-                    mass = number.ToCharArray();
-                }
-            }
-            Console.WriteLine(number);
-            }
-            break;
-            case 4:
-             Console.WriteLine("Введите текст на русской раскладке");
-            string Viddle = Console.ReadLine();
-            int Count = 0;
-            int Gok = 0;
-            int numSimvol = 0;
-            int maxnumSimvol = 0;
-            List<char> alphabet = new List<char>();
-            for (int i = 1040; i < 1104; i++)
-            {
-                alphabet.Add((char)i);
-            }
-            char[] MASS = Viddle.ToCharArray();
-            for (int i = 0; i < MASS.Length; i++)
-            {
-                Gok = 0;
-                for (int j = 0; j < alphabet.Count; j++)
-                { 
-                    if (MASS[i] == alphabet[j])
-                    {
-                        Count += 1;
-                        numSimvol = 0;
-                    }
-                    else if(MASS[i] != alphabet[j])
-                    {
-                        Gok++;
-                        if (Gok == 64)
+                        Console.WriteLine("Введите число в двоичной системе, только 0 и 1");
+                        string number = Console.ReadLine();
+                        char[] mass = number.ToCharArray();
+                        int deg = 0;
+                        int ch = 0;
+                        for (int i = 0; i < mass.Length; i++)
                         {
-                            numSimvol++;
-                            if (maxnumSimvol <= numSimvol)
+                            if ((mass[i] != '0' && mass[i] != '1'))
                             {
-                                maxnumSimvol = numSimvol;
+                                Console.WriteLine("Число введено в некоректной форме. Введите число в двоичной системе, только 0 и 1");
+                                number = Console.ReadLine();
+                                mass = number.ToCharArray();
                             }
                         }
-                    }
-                }
-            }
-            Console.WriteLine("Количество букв: "+Count);
-            Console.Write("Количество элементов, отличных от букв: " );
-            Console.WriteLine(MASS.Length - Count);
-            Console.WriteLine("Количество максимальных элементов, в интервале между буквами: "+maxnumSimvol);
-            break;
+                        for (int i = number.Length - 1; i>= 0;i--)
+                        {
+                            if (mass[i] == '1')
+                            {
+                                ch += Convert.ToInt32(Math.Pow(2, deg));
+                            }
+                            ++deg;
+                        }
+                        Console.WriteLine(ch);
+
+                    case 3:
+                         Console.WriteLine("Введите число в двоичной системе, только 0 и 1");
+                        string number =Console.ReadLine();
+                        char[] mass = number.ToCharArray();
+                        for(int i = 0; i < mass.Length; i++)
+                        {
+                            if ((mass[i]!='0'&& mass[i] != '1'))
+                            {
+                                Console.WriteLine("Число введено в некоректной форме. Введите число в двоичной системе, только 0 и 1");
+                                number = Console.ReadLine();
+                                mass = number.ToCharArray();
+                            }
+                        }
+                        Console.WriteLine(number);
+                        }
+                     break;
+                    case 4:
+                         Console.WriteLine("Введите текст на русской раскладке");
+                        string Viddle = Console.ReadLine();
+                        int Count = 0;
+                        int Gok = 0;
+                        int numSimvol = 0;
+                        int maxnumSimvol = 0;
+                        List<char> alphabet = new List<char>();
+                        for (int i = 1040; i < 1104; i++)
+                        {
+                            alphabet.Add((char)i);
+                        }
+                        char[] MASS = Viddle.ToCharArray();
+                        for (int i = 0; i < MASS.Length; i++)
+                        {
+                            Gok = 0;
+                            for (int j = 0; j < alphabet.Count; j++)
+                            { 
+                                if (MASS[i] == alphabet[j])
+                                {
+                                    Count += 1;
+                                    numSimvol = 0;
+                                }
+                                else if(MASS[i] != alphabet[j])
+                                {
+                                    Gok++;
+                                    if (Gok == 64)
+                                    {
+                                        numSimvol++;
+                                        if (maxnumSimvol <= numSimvol)
+                                        {
+                                            maxnumSimvol = numSimvol;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        Console.WriteLine("Количество букв: "+Count);
+                        Console.Write("Количество элементов, отличных от букв: " );
+                        Console.WriteLine(MASS.Length - Count);
+                        Console.WriteLine("Количество максимальных элементов, в интервале между буквами: "+maxnumSimvol);
+                  break;
                     
