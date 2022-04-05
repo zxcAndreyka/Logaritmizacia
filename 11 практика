@@ -1,0 +1,44 @@
+Console.WriteLine("Введите номер задания");
+            int egor = Convert.ToInt32(Console.ReadLine());
+            switch (egor)
+            {
+                case 1:
+                case 2:
+                    try
+                    {
+                        Console.WriteLine("Напишите значения U");
+                        int U = Int32.Parse(Console.ReadLine());
+                        Console.WriteLine("Напишите значения R");
+                        int R = Int32.Parse(Console.ReadLine());
+                        Console.WriteLine(U / R);
+                       
+                    }
+                    catch (DivideByZeroException)
+                    {
+                        Console.WriteLine("деление на ноль");
+                    }
+                    catch (System.FormatException)
+                    {
+                        Console.WriteLine("неверный формат");
+                    }
+                    break;
+                case 3:
+                    try
+                    {
+                        Console.WriteLine("Напишите цену в долларах");
+                        double dollar = double.Parse(Console.ReadLine());
+                        double kurs = 83.91;
+                        double rubli = dollar * kurs;
+                        Console.WriteLine("цена в рублях: "+rubli);
+                    }
+                    catch (System.FormatException)
+                    {
+                        Console.WriteLine("неверный формат");
+                    }
+                    catch(Exception ex)
+                    {
+                        Console.WriteLine("ошибка !!!!!!!!!!! " + ex);
+                    }
+                    break;
+            }
+            Console.ReadKey();
