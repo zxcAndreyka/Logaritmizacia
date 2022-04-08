@@ -1,68 +1,121 @@
-Console.WriteLine("Введите первое слово");
-            string slov1 = Console.ReadLine();
-            Console.WriteLine("Введите второе слово");
-            string slov2 = Console.ReadLine();
-            char[] mass1 = slov1.ToCharArray();
-            char[] mass2 = slov2.ToCharArray();
-            for (int i = 0; i < mass1.Length; i++)
+            Console.WriteLine("Введите номер задания");
+            int egor = Convert.ToInt32(Console.ReadLine());
+            switch (egor)
             {
-                for (int j = 0; j < mass2.Length; j++)
-                {
-                    if (mass1[i] == mass2[j]) break;
-                    if (j == mass2.Length - 1 && mass2[j] != mass1[i]) 
-                        Console.Write(mass1[i] + " ");
-
-
-                }
-            }
-            for (int i = 0; i < mass2.Length; i++)
-            {
-                for (int j = 0; j < mass1.Length; j++)
-                {
-                    if (mass2[i] == mass1[j]) break;
-                    if (j == mass1.Length - 1 && mass1[j] != mass2[i]) 
-                        Console.Write(mass2[i] + " ");
-
-
-                }
-            }
- Console.WriteLine("Напишите два слова");
-                    string slovo = Console.ReadLine();
-                    int col = 6;
-                    int num = 0;
-                    int count = 0;
-                        char[] mass1 = slovo.ToCharArray();
-                    for (int j = 0; j < mass1.Length; j++)
-                    {
-                        count++;
-                        
-                        if (char.IsLetter(mass1[j]) == false)
+                        Console.WriteLine("Введите первое слово");
+                        string slov1 = Console.ReadLine();
+                        Console.WriteLine("Введите второе слово");
+                        string slov2 = Console.ReadLine();
+                        char[] mass1 = slov1.ToCharArray();
+                        char[] mass2 = slov2.ToCharArray();
+                        for (int i = 0; i < mass1.Length; i++)
                         {
-                            num++;
-                            
-                        }
-                        else
-                        {
-                            if (num == 1)
+                            for (int j = 0; j < mass2.Length; j++)
                             {
-                                if (mass1[j] == mass1[col / 2 -3] || mass1[j] == mass1[col / 2 -2] || mass1 [j] == mass1[col/2 -1])
-                                {
-                                    Console.WriteLine("можно");
-                                }
+                                if (mass1[i] == mass2[j]) break;
+                                if (j == mass2.Length - 1 && mass2[j] != mass1[i]) 
+                                    Console.Write(mass1[i] + " ");
+
+
                             }
-
-                            if (count >= 2)
+                        }
+                        for (int i = 0; i < mass2.Length; i++)
+                        {
+                            for (int j = 0; j < mass1.Length; j++)
                             {
+                                if (mass2[i] == mass1[j]) break;
+                                if (j == mass1.Length - 1 && mass1[j] != mass2[i]) 
+                                    Console.Write(mass2[i] + " ");
+
+
+                            }
+                        }
+
+                            case 1:
+                                Console.WriteLine("Напишите два слова");
+                                string slovo = Console.ReadLine();
+                                int col = 0;
+                                int num = 0;
+                                int count = 0;
+                                int key = 0;
+                                slovo.Trim();
+                                string[] mass2 = slovo.Split(' ');
+                                for (int l = 0; l < mass2.Length;l++)
+                                {
+                                    key = mass2[1].Length;
+                                }
+                                char[] mass1 = slovo.ToCharArray();
+                                for (int j = 0; j < mass1.Length; j++)
+                                {
+                                    if (char.IsLetter(mass1[j]) == false)
+                                    {
+                                        num++;
+                                    }
+                                    else
+                                    {
+                                        if (j < 1)
+                                        {
+                                            for (int i = 0; i < mass1.Length - 1; i++)
+                                            {
+                                                col++;
+                                            }
+                                        }
+                                        if (num == 1)
+                                        {
+                                            if (mass1[j] == mass1[col / 2 - 3] || mass1[j] == mass1[col / 2 - 2] || mass1[j] == mass1[col / 2 - 1] || mass1[j] == mass1[col / 2 - 4] || mass1[j] == mass1[col / 2 - 5] || mass1[j] == mass1[col / 2 - 6] || mass1[j] == mass1[col / 2 - 7] || mass1[j] == mass1[col / 2 - 8] || mass1[j] == mass1[col / 2 - 9] || mass1[j] == mass1[col / 2 - 10])
+                                            {
+                                                count++;
+                                                if (count == key )
+                                                {
+                                                    Console.WriteLine("Из первого слова можно составить второе");
+                                                }
+
+                                            }
+                                        }
+
+                                    }
+                                }
                                 break;
-                            }
-                            for (int i = 0; i < 7; i++)
-                            {
-                                if (char.IsLetter(mass1[i]) == true)
+                            case 2:
+                                Console.WriteLine("Напишите два слова");
+                                string slovo = Console.ReadLine();
+                                int col = 0;
+                                int key = 0;
+                                int sum = 0;
+                                int num = 0;
+                                int count = 0;
+                                slovo.Trim();
+                                char[] mass1 = slovo.ToCharArray();
+                                for (int j = 0; j < mass1.Length; j++)
                                 {
-                                    col++;
+                                    if (char.IsLetter(mass1[j]) == false)
+                                    {
+                                        num++;
+                                        sum = key;
+                                    }
+                                    else
+                                    {
+                                        key++;
+                                        if (j < 1)
+                                        {
+                                            for (int i = 0; i < mass1.Length - 1; i++)
+                                            {
+                                                col++;
+                                            }
+                                        }
+                                        if (num == 1)
+                                        {
+                                            if (mass1[j] == mass1[col / 2 - 3] || mass1[j] == mass1[col / 2 - 2] || mass1[j] == mass1[col / 2 - 1] || mass1[j] == mass1[col / 2 - 4] || mass1[j] == mass1[col / 2 - 5] || mass1[j] == mass1[col / 2 - 6] || mass1[j] == mass1[col / 2 - 7] || mass1[j] == mass1[col / 2 - 8] || mass1[j] == mass1[col / 2 - 9] || mass1[j] == mass1[col / 2 - 10])
+                                            {
+                                                count++;
+                                                if (count == (col / 2) && count == sum)
+                                                {
+                                                    Console.WriteLine("Из первого слова можно составить второе");
+                                                }
+
+                                            }
+                                        }
+                                    }
                                 }
-                            }
-                            continue;
+                                break;
                         }
-                    }
-                    break;
