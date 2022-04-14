@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+namespace ConsoleApp8
+{
+    public class SamplesStack
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                /* double max = 0;
+                 Stack<double> st = new Stack<double>();
+                 st.Push(-5.2);
+                 st.Push(72.3);
+                 st.Push(2.3);
+                 st.Push(18.4);
+                 st.Push(-16.3);
+                 foreach(double x in st)
+                     if (x > max)
+                     {
+                         max = x;
+                     }
+                 Console.WriteLine("Максимальное число {0}",max);
+                 foreach (double x in st)
+                 {
+                     Console.WriteLine(x);
+                 }*/
+                Stack<string> st = new Stack<string>();
+                st.Push("group");
+                st.Push("220");
+                st.Push("study");
+                st.Push("hello group");
+                st.Push("are you ready");
+                foreach (string x in st)
+                {
+                    Console.WriteLine(x);
+                }
+            }
+        }
+    }
+}
